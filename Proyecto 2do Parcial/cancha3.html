@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <style>
+        /* Estilos generales */
+        body {
+            background-color: #f8f9fa;
+        }
+
+        /* Navbar personalizada */
+        .navbar-custom {
+            background-color: #FFDE59;
+        }
+
+        .logo {
+            width: 50px;
+        }
+
+        .nav-item {
+            margin-right: 30px;
+        }
+
+        .form-control {
+            border-radius: 0;
+            background-color: #e0e0e0;
+        }
+
+        /* Estilos de la cancha */
+        .court-info {
+            margin-top: 100px; /* Incrementa el margen superior para bajar todo */
+            display: flex;
+            justify-content: center; /* Centrar horizontalmente */
+            align-items: center; /* Centrar verticalmente */
+            text-align: left; /* Alinear texto a la izquierda */
+        }
+
+        .court-info img {
+            width: 300px; /* Reducción del tamaño de la imagen */
+            height: auto;
+            border-radius: 10px;
+            margin-right: 50px;
+        }
+
+        /* Contenedor de horarios y días */
+        .schedule-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-right: 50px;
+        }
+
+        .day-selector {
+            margin: 10px 0;
+            display: flex;
+            justify-content: space-around;
+            font-weight: bold;
+        }
+
+        .day-selector span {
+            cursor: pointer;
+        }
+
+        .day-selector span:hover {
+            color: #6c757d;
+        }
+
+        .time-selector {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .time-selector div {
+            background-color: #FFDE59;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .time-selector div:hover {
+            background-color: #e0a800;
+        }
+    </style>
+    <title>Rentas</title>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html">
+                <img src="imagenes/Logo-p-rent.png" alt="Logo Play Rent" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="cuenta.html">Cuenta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="rentas.html">Rentas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pagos.html">Pagos</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Elige ubicación" aria-label="Ubicación" disabled>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Información de la cancha y horarios -->
+     
+    <div class="container court-info">
+        
+        <img src="imagenes/WhatsApp Image 2024-10-19 at 5.13.10 PM.jpeg" alt="Cancha de Basketball">
+
+        <!-- Contenedor para días y horarios -->
+        <div class="schedule-info">
+            <h3>Cancha de tenis deportiva satelite</h3>
+
+            <!-- Selección de días -->
+            <div class="day-selector">
+                <span id="hoy">Hoy<br>01 Septiembre</span>
+                <span id="manana">Mañana<br>02 Septiembre</span>
+                <span id="miércoles">Miércoles<br>03 Septiembre</span>
+            </div>
+
+            <!-- Horarios disponibles -->
+            <h4>Horarios Disponibles</h4>
+            <div class="time-selector">
+                <div>18:00</div>
+                <div>20:00</div>
+                <div>21:00</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Horarios para cada día
+        const hoyHorarios = ["18:00", "20:00", "21:00"];
+        const mananaHorarios = ["16:00", "19:00", "22:00"];
+        const miercolesHorarios = ["14:00", "17:00", "19:00"];
+
+        // Elementos HTML
+        const hoy = document.getElementById('hoy');
+        const manana = document.getElementById('manana');
+        const miercoles = document.getElementById('miércoles');
+        const timeSelectors = document.querySelectorAll('.time-selector div');
+
+        // Función para actualizar los horarios
+        function actualizarHorarios(horarios) {
+            timeSelectors.forEach((time, index) => {
+                time.textContent = horarios[index];
+            });
+        }
+
+        // Eventos de clic para cada día
+        hoy.addEventListener('click', () => {
+            actualizarHorarios(hoyHorarios);
+        });
+
+        manana.addEventListener('click', () => {
+            actualizarHorarios(mananaHorarios);
+        });
+
+        miercoles.addEventListener('click', () => {
+            actualizarHorarios(miercolesHorarios);
+        });
+    </script>
+
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

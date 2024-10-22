@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+
+        footer {
+            position: sticky;
+            bottom: 0;
+            width: 100%;
+            height: 10%;
+            text-align: center;
+            background-color: #FFDE59;
+        }
+
+        /* Estilo para la barra de navegación */
+        .navbar-custom {
+            background-color: #FFDE59;
+        }
+
+        .logo {
+            width: 100px;
+        }
+
+        /* Estilos para los enlaces de navegación */
+        .nav-item {
+            margin-right: 30px;
+        }
+
+        .nav-link {
+            color: black;
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Estilo cuando estás en la página activa */
+        .nav-link.active {
+            background-color: #e0a800;
+            color: white;
+            border-radius: 25px;
+        }
+
+        /* Efecto hover para todas las páginas */
+        .nav-link:hover {
+            background-color: #f3bf1b;
+            color: white;
+            border-radius: 25px;
+        }
+
+        /* Estilos para el carrusel */
+        .carousel-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            text-align: center;
+        }
+
+        .line {
+            height: 25px; /* Ajuste del grosor de las líneas */
+            background-color: #FFDE59;
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: black;
+        }
+
+        .carousel-inner img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .carousel-item .row {
+            display: flex;
+            justify-content: center;
+        }
+
+        .carousel-item img {
+            height: 200px;
+            object-fit: cover;
+            max-width: 300px; /* Para limitar el ancho de cada imagen */
+            margin: 0 10px; /* Espaciado entre imágenes */
+        }
+
+    </style>
+    <title>Play Rent - Canchas</title>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html">
+                <img src="imagenes/Logo-p-rent.png" alt="Logo Play Rent" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <!-- Resalta la página actual con la clase 'active' -->
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="cuenta.html">Cuenta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="rentas.html">Rentas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pagos.html">Pagos</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Elige ubicación" aria-label="Ubicación" disabled>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Centro de la pantalla con líneas amarillas y carrusel en medio -->
+    <div class="carousel-container">
+        <h4 class="carousel-title">Fotos de nuestras canchas:</h4>
+        <!-- Línea superior amarilla -->
+        <div class="line"></div>
+
+        <!-- Carrusel de fotos -->
+        <div id="canchaCarousel" class="carousel slide" data-bs-ride="carousel">
+            
+            <div class="carousel-inner">
+                
+                <!-- Primer grupo de 3 imágenes -->
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <a href="cancha1.html">
+                            <img src="imagenes/WhatsApp Image 2024-10-19 at 5.12.47 PM.jpeg" class="d-block" alt="Cancha 1">
+                        </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="cancha2.html">
+                            <img src="imagenes/WhatsApp Image 2024-10-19 at 5.12.59 PM.jpeg" class="d-block" alt="Cancha 2">
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="cancha3.html">
+                            <img src="imagenes/WhatsApp Image 2024-10-19 at 5.13.10 PM.jpeg" class="d-block" alt="Cancha 3">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Segundo grupo de 3 imágenes -->
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="imagenes/WhatsApp Image 2024-10-19 at 6.18.56 PM.jpeg" class="d-block" alt="Cancha 4">
+                        </div>
+                        <div class="col-md-4">
+                            <img src="imagenes/WhatsApp Image 2024-10-19 at 6.19.06 PM.jpeg" class="d-block" alt="Cancha 5">
+                        </div>
+                        <div class="col-md-4">
+                            <img src="imagenes/WhatsApp Image 2024-10-19 at 6.19.24 PM.jpeg" class="d-block" alt="Cancha 6">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#canchaCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#canchaCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!-- Línea inferior amarilla -->
+        <div class="line"></div>
+
+    </div>
+    <footer>
+        <p>&copy;Copyright to PlayRent &copy;</p>
+    </footer>
+
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

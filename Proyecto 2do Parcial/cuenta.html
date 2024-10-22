@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <style>
+        /* Estilos generales */
+        body {
+            background-color: #f8f9fa;
+        }
+
+        footer {
+        position: sticky;
+        bottom: 0;
+        width: 100%;
+        height: 10%;
+        text-align: center;
+        background-color: #FFDE59;
+      }
+        
+        /* Navbar personalizada */
+        .navbar-custom {
+            background-color: #FFDE59;
+        }
+
+        .logo {
+            width: 100px;
+        }
+
+        .nav-item {
+            margin-right: 30px;
+        }
+
+        .nav-link {
+            color: black;
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s;
+        }
+       
+        /* Estilo cuando estás en la página activa */
+ 
+        .nav-link.active {
+            background-color: #e0a800;
+            color: white;
+            border-radius: 25px;
+        }
+
+        /* Efecto hover para todas las páginas */
+        .nav-link:hover {
+            background-color: #f3bf1b;
+            color: white;
+            border-radius: 25px;
+        }
+
+        .form-control {
+            border-radius: 0;
+            background-color: #e0e0e0;
+        }
+
+        /* Estilos del formulario de cuenta */
+        .account-form {
+            background-color: #FFDE59;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .account-form-inner {
+            background-color: #e0e0e0;
+            padding: 20px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .form-control-plaintext {
+            background-color: #7477AB;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 5px;
+        }
+
+        .btn-eliminar {
+            background-color: #7477AB;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        /* Estilos para las nuevas opciones de la cuenta */
+        .account-options {
+            margin-top: 20px;
+        }
+
+        .account-options a {
+            display: block;
+            background-color: #7477AB;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+
+        .account-options a:hover {
+            background-color: #5a6268;
+        }
+
+    </style>
+    <title>Cuenta</title>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html">
+                <img src="imagenes/Logo-p-rent.png" alt="Logo Play Rent" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="cuenta.html">Cuenta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="rentas.html">Rentas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pagos.html">Pagos</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Elige ubicación" aria-label="Ubicación" disabled>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Formulario de cuenta -->
+    <div class="container account-form">
+        <div class="account-form-inner">
+            <div class="form-group">
+                <label for="nombre">NOMBRE:</label>
+                <span class="form-control-plaintext">USUARIO</span>
+            </div>
+            <div class="form-group">
+                <label for="contraseña">CONTRASEÑA:</label>
+                <span class="form-control-plaintext">************</span>
+            </div>
+            <button class="btn-eliminar btn-danger">ELIMINAR CUENTA</button>
+
+            <!-- Opciones adicionales de la cuenta -->
+            <div class="account-options">
+                <a href="#">Editar perfil</a>
+                <a href="#">Cambiar contraseña</a>
+                <a href="#">Configuración de privacidad</a>
+                <a href="#">Cerrar sesión</a>
+            </div>
+        </div>
+    </div>
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
